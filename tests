@@ -1,0 +1,51 @@
+class Token {
+    name : String;
+};
+
+class NumberToken inherits Token {
+    value : Int;
+
+    init(val : Int) : SELF_TYPE {
+        {
+            name <- "NUMBER";
+            value <- val;
+            self;
+        }
+    };
+};
+
+class IdentifierToken inherits Token {
+    id : String;
+
+    init(identifier : String) : SELF_TYPE {
+        {
+            name <- "IDENTIFIER";
+            id <- identifier;
+            self;
+        }
+    };
+};
+
+class OperatorToken inherits Token {
+    operator : String;
+
+    init(op : String) : SELF_TYPE {
+        {
+            name <- "OPERATOR";
+            operator <- op;
+            self;
+        }
+    };
+};
+
+class StringToken inherits Token {
+    str : String;
+
+    init(string : String) : SELF_TYPE {
+        {
+            name <- "STRING";
+            str <- string;
+            self;
+        }
+    };
+};
